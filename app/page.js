@@ -55,12 +55,17 @@ export default function Home() {
         <div>
           <p className="eyebrow">Landscaping &amp; Gardening · London</p>
           <h1>{BUSINESS}</h1>
-          <p className="sub">Profit sharing calculator - {PARTNER_1} &amp; {PARTNER_2}</p>
+          <p className="sub">Profit sharing calculator — {PARTNER_1} &amp; {PARTNER_2}</p>
         </div>
-        <label className="period">
-          <span>Period</span>
-          <input value={period} onChange={(e) => setPeriod(e.target.value)} placeholder="e.g. October 2026" />
-        </label>
+        <div className="hero-side">
+          <form action="/api/logout" method="post">
+            <button className="logout" type="submit">Log out</button>
+          </form>
+          <label className="period">
+            <span>Period</span>
+            <input value={period} onChange={(e) => setPeriod(e.target.value)} placeholder="e.g. October 2026" />
+          </label>
+        </div>
       </header>
 
       <section className="card">
@@ -74,7 +79,7 @@ export default function Home() {
         </div>
 
         <div className="rows">
-          {projects.length === 0 && <p className="muted">No projects yet - add one above.</p>}
+          {projects.length === 0 && <p className="muted">No projects yet — add one above.</p>}
           {projects.map((p, i) => (
             <div className="project" key={p.id}>
               <div className="row">
@@ -145,7 +150,7 @@ export default function Home() {
                   </div>
                 )}
                 {p.useCost && profitOf(p) < 0 && (
-                  <p className="warn">Cost is higher than the price - this project is a loss and will reduce the totals.</p>
+                  <p className="warn">Cost is higher than the price — this project is a loss and will reduce the totals.</p>
                 )}
               </div>
             </div>

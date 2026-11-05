@@ -36,3 +36,12 @@ Each project has a **"Calculate gross profit from price − cost"** checkbox. Ti
 - `app/page.js` — the calculator UI (entries are remembered in the browser)
 - `lib/calc.js` — all the profit-sharing logic and rates
 - `lib/pdf.js` — PDF receipt (jsPDF + jspdf-autotable)
+
+## Password protection
+
+The whole site is behind a login page. The password is **not** in the code — set it as an environment variable:
+
+- **Vercel:** Project → Settings → Environment Variables → add `APP_PASSWORD` with your password → then redeploy.
+- **Locally:** create a file `.env.local` containing `APP_PASSWORD=your-password` (it's ignored by Git).
+
+If `APP_PASSWORD` isn't set, the site stays locked. Changing the password logs everyone out. A login lasts 30 days on that browser, or until you press **Log out**.
