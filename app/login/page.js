@@ -35,7 +35,7 @@ export default function Login() {
       <form className="login card" onSubmit={submit}>
         <p className="eyebrow">Private</p>
         <h1>{BUSINESS}</h1>
-        <p className="muted">Profit sharing calculator. Enter the password to continue.</p>
+        <p className="muted">Enter the password to continue.</p>
         <label>
           <span>Password</span>
           <input

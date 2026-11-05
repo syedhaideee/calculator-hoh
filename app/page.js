@@ -55,7 +55,7 @@ export default function Home() {
         <div>
           <p className="eyebrow">Landscaping &amp; Gardening · London</p>
           <h1>{BUSINESS}</h1>
-          <p className="sub">Profit sharing calculator — {PARTNER_1} &amp; {PARTNER_2}</p>
+          <p className="sub">Calculator — {PARTNER_1} &amp; {PARTNER_2}</p>
         </div>
         <div className="hero-side">
           <form action="/api/logout" method="post">
